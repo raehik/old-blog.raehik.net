@@ -1,10 +1,10 @@
 # Site settings
-title: doing things on Linux
-email: thefirstmuffinman@gmail.com
-description: "Writings and guides on everything Linux."
+title: 'Generic Dev #65535'
+email: 'thefirstmuffinman@gmail.com'
+description: 'Writings and guides on everything Linux.'
 baseurl: ""
 url: "raeh.co"
-twitter_username: jekyllrb
+twitter_username: raehik
 github_username:  raehik
 
 # Build settings
