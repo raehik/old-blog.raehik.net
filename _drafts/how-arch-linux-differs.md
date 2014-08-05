@@ -18,12 +18,22 @@ switch!), there are a couple things you might find different, and some you
 might find confusing. Or at least, I did. Here's a short list of **how Arch is
 different to other distros:**
 
-### 1. Super flexible
+
+1. Super flexible
+-----------------
 
 Arch Linux does not suggest to its users which programs to use - ***at all***.
 
 
-### 2. You have to lrn2\*nix
+2. You have to lrn2\*nix
+------------------------
+
+Some distros such as Ubuntu and Linux Mint try to make the switch from Windows
+to Linux easy by doing things in a Windows-y way. For example, automatic device
+mounting in Ubuntu, the *"wow! it's so easy!"* packaging, etc.
+
+Arch Linux doesn't make switching easy by emulating the features users are used
+to. Instead, they provide masses of documentation on 
 
 The way that Arch Linux is packaged and the wiki formatted encourages (or
 perhaps requires) users to *learn how to use* packages they install. Hardly any
@@ -31,7 +41,8 @@ non-essential programs are included with the base installation: not even `ntpd`
 or `openssh`.
 
 
-### 3. Experienced, helpful community
+3. Experienced, helpful community
+---------------------------------
 
 *"A Linux community? Helpful?"* you might ask. Well, not necessarily *nice*
 about it all the time, but the Arch community forums are a brilliant resource
