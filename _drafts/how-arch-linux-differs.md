@@ -4,8 +4,17 @@ title:  "How (and why) Arch Linux is different"
 date:   2014-08-03 16:07:01
 ---
 
-[Arch Linux](Arch wiki) is a mighty fine distro. The comprehensive wiki covers
-con configuration for a **lot** of popular programs, and not in an
+[Arch Linux](https://www.archlinux.org) is, in its own website's words, *"a
+lightweight and flexible Linux® distribution that tries to Keep It Simple."
+It's great for learning about Linux and important low-level tools, and is also
+super fast, but unlike most OSs it requires some effort by the user to
+understand how to use it. That seems to be the thing which both pulls hackers
+to it and pushes 'regular users' away from it.
+
+
+
+is a mighty fine distro. The comprehensive wiki covers
+configuration for a **lot** of popular programs, and not in an
 Arch-specific way (e.g. one of the reasons I started using it was because I was
 using the wiki for every Ubuntu problem I had). And then there's the speed, and
 the beautiful portability of an Arch installation, and the cool colourscheme...
@@ -33,7 +42,9 @@ to Linux easy by doing things in a Windows-y way. For example, automatic device
 mounting in Ubuntu, the *"wow! it's so easy!"* packaging, etc.
 
 Arch Linux doesn't make switching easy by emulating the features users are used
-to. Instead, they provide masses of documentation on 
+to. Instead, they make it easy by providing masses of documentation on
+everything and anything you might wish to use. Like, *everything*. It's really
+one of the best (if not the best) Linux wikis out there.
 
 The way that Arch Linux is packaged and the wiki formatted encourages (or
 perhaps requires) users to *learn how to use* packages they install. Hardly any
