@@ -4,6 +4,9 @@ title:  "How (and why) Arch Linux is different"
 date:   2014-08-03 16:07:01
 ---
 
+*(Note: I do not represent Arch Linux, and this isn't endorsed by them or
+anything.)*
+
 [Arch Linux](https://www.archlinux.org) is, in its own website's words, *"a
 lightweight and flexible Linux® distribution that tries to Keep It Simple."
 It's great for learning about Linux and important low-level tools, and is also
