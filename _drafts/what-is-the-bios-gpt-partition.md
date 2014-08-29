@@ -35,9 +35,9 @@ which allow it to find the partition with `/boot/grub` in (e.g. filesystem drive
 <!-- http://en.wikipedia.org/wiki/File:GNU_GRUB_on_MBR_partitioned_hard_disk_drives.svg -->
 <!-- Remember to attribute -->
 
-It's old. [1983 old](http://en.wikipedia.org/wiki/Master_boot_record#Overview). With MBR, you can't address disks larger than 2 TB. You're also limited to just 4 primary partitions (though you can have more if you use extended partitions, they have the feeling of an bugfix rather than a design principal).
+It's old. **[1983 old](http://en.wikipedia.org/wiki/Master_boot_record#Overview)**. With MBR, you can't address disks larger than 2 TB. You're also limited to just 4 primary partitions (though you can have more if you use extended partitions, they have the feeling of an bugfix rather than a design principal).
 
-GPT, for GUID Partition Table, is a
+GPT, for GUID Partition Table, is a newer partioning scheme. It's part of the UEFI (?) standard - however it's often used in BIOS systems because of MBR's *crippling* limitations.
 
 In the GPT partitioning scheme, there *isn't* any extra space -- it's used for
 the partition table (??).
