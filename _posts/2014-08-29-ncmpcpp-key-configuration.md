@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ncmpcpp key configuration"
-date: 2014-08-29 20:19:28
+date: 2014-08-29 20:26:28
 ---
 
 `ncmpcpp` is a popular client for `mpd`, a music-playing daemon (literally,
