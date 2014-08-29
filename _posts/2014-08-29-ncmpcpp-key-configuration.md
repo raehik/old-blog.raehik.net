@@ -8,15 +8,15 @@ date: 2014-08-29 20:19:28
 **M**usic **P**layer **D**aemon), which allows a good deal of configuration
 and looks okay too.
 
-However, I had some gripes (?) with key configuration. `ncmpcpp` allows you to
+However, I had some troubles with key configuration. `ncmpcpp` allows you to
 bind a maximum of 2 keys to a command, which is nice. You can define a key
 by either the character (e.g. 'g', 'F') or a decimal value. But annoyingly, it
 doesn't explain where the decimal value *comes* from for each key.
 
-In a completely undocumented decision (?), it seems that **ncmpcpp's key
-configuration uses ASCII key codes.** So, if you wanted to bind the Escape key
-to the `key_quit` command (normally (?) mapped to 'q' and 'Q'), then you might
-follow this procedure:
+I believe it is *completely undocumented* that **ncmpcpp's key configuration
+uses ASCII key codes.** So, if you wanted to bind the Escape key to the
+`key_quit` command (mapped to 'q' and 'Q' by default), then you might follow
+this procedure:
 
     $ showkey -a # show ASCII codes
 
