@@ -4,6 +4,8 @@ title: "Complex layouts, autostarting & more on i3"
 date: 2014-09-01 12:04:32
 ---
 
+*tl;dr read [my i3 config](https://github.com/raehik/dotfiles/blob/master/home/.i3/config), it's heavily commented*
+
 `i3` is a fantastic window manager which gives you tons of options for
 configuration. Accompanying the useful features is some great documentation.
 However, there is one thing the [user's guide](http://i3wm.org/docs/userguide.html)
@@ -29,10 +31,29 @@ the `exec` keyword. It's described pretty well in the User's Guide, section
 To start something on a specific workspace, it seems to be recommended that you
 use `i3-msg` as such:
 
-    exec --no-startup-id i3-msg 'workspace number x
+    exec --no-startup-id i3-msg 'workspace number X; exec /path/to/program'
 
-(The `workspace number` is explained later.)
+*(The `workspace number` is to do with [naming workspaces](http://i3wm.org/docs/userguide.html#_named_workspaces)
+-- it means "go to the workspace which begins with number X".)*
 
+I say "seems to be" because I'm not *completely* sure why `exec i3-msg` is
+required, rather than just `workspace number x; exec /path/to/program`.
+
+
+### append_layout (?)
+
+After you've started a program, you can then apply a layout to it. This means
+you can always start a workspace with a certain configuration of windows and
+have them be in their correct places (rather than you move windows around each
+time manually).
+
+Same as starting programs, prefix the command (`append_layout`) with
+`workspace [number] X`:
+
+    exec --no-startup-id i3-msg 'workspace number X; append_layout "/home/user/.i3/workspace-x-layout.json"'
+
+I like to wrap the layout path in double quotes to show what it is, but it
+isn't necessary (unless the path has a space in it!)
 
 
 Begin on a specific workspace (most of the time)
