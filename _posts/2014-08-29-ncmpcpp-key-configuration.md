@@ -4,6 +4,12 @@ title: "ncmpcpp key configuration"
 date: 2014-08-29 20:26:28
 ---
 
+*EDIT: hah, imagine that: just a week after I post this, the Arch Linux repo
+       updates to the `0.6_beta2` release, which totally obsoletes this whole
+       post. of course, it's not really a bad thing: the new keybinding system
+       is a *lot* more flexible. going to make a post on all the improvements,
+       so stay tuned!*
+
 `ncmpcpp` is a popular client for `mpd`, a music-playing daemon (literally,
 **M**usic **P**layer **D**aemon), which allows a good deal of configuration
 and looks okay too.
