@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Complex layouts & autostarting in i3"
-date: 2014-09-01 12:04:32
+date: 2014-09-28 18:08:00
 ---
 
 i3 is a fantastic window manager which gives you tons of options for
@@ -9,12 +9,13 @@ configuration. Accompanying the useful features is some great documentation.
 However, the [user's guide](http://i3wm.org/docs/userguide.html) currently
 doesn't explain layouts in great detail.
 
-[Layouts](i3wm.org/docs/layout-saving.html) and autostarting programs allow you
-to set out programs in a consistent manner every time you start i3. Since it's
-a very new feature in i3 (introduced in v4.8, the latest stable version), it
+By utilising layouts and autostarting, you can start i3 with a fixed set of
+programs, which I find extremely useful. Since layouts are a very new feature in i3 (introduced in v4.8, the latest stable version), it
 doesn't have masses of good docs. So, here are some of the things I've done
-with [my i3 config](https://github.com/raehik/dotfiles/blob/master/home/.i3/config)
-(linked to the latest version on GitHub at [raehik/dotfiles](https://github.com/raehik/dotfiles)).
+in [my i3 config](https://github.com/raehik/dotfiles/blob/master/home/.i3/config)
+to do with layouts & autostarting.
+
+TODO: [Layouts](i3wm.org/docs/layout-saving.html)
 
 
 Autostarting
@@ -31,11 +32,18 @@ use `i3-msg` as such:
 
     exec --no-startup-id i3-msg 'workspace number X; exec /path/to/program'
 
-*(The `workspace number` is to do with [naming workspaces](http://i3wm.org/docs/userguide.html#_named_workspaces)
--- it means "go to the workspace which begins with number X".)*
+*(The `workspace number` is to do with [naming workspaces](http://i3wm.org/docs/userguide.html#_named_workspaces) -- it means "go to the workspace which begins with number X".)*
 
 I say "seems to be" because I'm not *completely* sure why `exec i3-msg` is
 required, rather than just `workspace number x; exec /path/to/program`.
+
+Since that's rather a mouthful (handful?) I set this variable at the start of
+the file:
+
+    set $i3_msg exec --no-startup-id i3-msg
+
+so that when I want to start something, I need only type `$i3_msg 'workspace
+number X; exec /path/to/program`. In an ideal world,
 
 
 ### append_layout (?)
