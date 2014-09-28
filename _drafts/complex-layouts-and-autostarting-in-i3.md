@@ -1,15 +1,13 @@
 ---
 layout: post
-title: "Complex layouts, autostarting & more on i3"
+title: "Complex layouts & autostarting in i3"
 date: 2014-09-01 12:04:32
 ---
 
-*tl;dr read [my i3 config](https://github.com/raehik/dotfiles/blob/master/home/.i3/config), it's heavily commented*
-
-`i3` is a fantastic window manager which gives you tons of options for
+i3 is a fantastic window manager which gives you tons of options for
 configuration. Accompanying the useful features is some great documentation.
-However, there is one thing the [user's guide](http://i3wm.org/docs/userguide.html)
-doesn't go over much: **layouts**.
+However, the [user's guide](http://i3wm.org/docs/userguide.html) currently
+doesn't explain layouts in great detail.
 
 [Layouts](i3wm.org/docs/layout-saving.html) and autostarting programs allow you
 to set out programs in a consistent manner every time you start i3. Since it's
@@ -61,7 +59,8 @@ Begin on a specific workspace (most of the time)
 
     exec --no-startup-id "i3-msg 'workspace number 1'"
 
-mention how it doesn't work every time for some reason
+It doesn't work every time, for whatever reason, but it doesn't matter enough
+to me to find out why.
 
 
 Layouts
@@ -73,23 +72,3 @@ Layouts
 
 
 ### Matching programs and layouts
-
-
-Other
------
-
-### Remove i3 exit nagbar
-
-It's dumb and I don't like it. Replace:
-
-    bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-
-With:
-
-    bindsym $mod+Shift+e exec "i3-msg exit"
-
-Now you won't get nagged by i3 every time you try to exit.
-
-    - remove exit nag
-    - enable back_and_forth
-    - other variables & their use
