@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Record additional full zsh history"
-date: 2014-10-12 09:28:19
+date: 2014-10-12 12:48:15
 ---
 
 I like to keep my shell history free of duplicates and limited size (so
@@ -9,7 +9,7 @@ I don't have to manually rotate it). However, after reading [that
 Stephen Wolfram
 post](http://blog.stephenwolfram.com/2012/03/the-personal-analytics-of-my-life)
 from my [last
-post](raehik.github.io/2014/10/08/things-that-are-cool-analysing-your-life),
+post](../../../../2014/10/08/things-that-are-cool-analysing-your-life),
 I've realised just how much I want to see my full command history: the
 embarrassing misspellings, the endless lines of `cd` and `ls`... It's a
 neat idea, I want to be able to analyse how I use my computer(s).
