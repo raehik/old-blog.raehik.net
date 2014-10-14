@@ -59,7 +59,7 @@ history. To fix this, we can use another special `zsh` function,
     # useful message which probably won't ever be written (! specifies an    
     # event, so it'll only work surrounded in quotes                         
     zshexit() {                                                              
-        echo "!EXIT!" >> "$HOME/.zsh_full_history"                                
+        echo "!EXIT!" >> "$HOME/.zsh_full_history"
     }  
 
     {% endhighlight %}
@@ -83,6 +83,23 @@ You can see that there were 2 exits there: the first done using the
 all that mattered to me was that Ctrl-D lines could be easily skipped
 programatically -- but this also records the time at which you exit a
 shell, which might be cool to look at.
+
+*2014-10-14 edit: I have found that occasionally `!EXIT!` will **not**
+have a date put before it >:( -- I fixed this by appending the date
+after !EXIT! every time:*
+
+    {% highlight bash %}
+
+    zshexit() {
+        echo "!EXIT! $(date "+%s")" >> "$HOME/.zsh_full_history"
+    }
+
+    {% endhighlight %}
+
+*This does mean that properly-formed exit lines have another date on
+the end (usually the same, though rarely a second later), but that can
+just be disregarded when looking at it. It at least means that **all**
+exit lines have a date attached.*
 
 ... Now I feel it's not complete, that I need to log when shells start
 too. This is pretty simple, as you'd imagine: since `.zshrc` is read by
