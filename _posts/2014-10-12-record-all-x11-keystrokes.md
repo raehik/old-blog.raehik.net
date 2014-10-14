@@ -2,6 +2,7 @@
 layout: post
 title: "Record all X11 keystrokes"
 date: 2014-10-12 13:00:00
+category: test-category
 ---
 
 This was **NOT** fun to do. For some reason, though implementing a
