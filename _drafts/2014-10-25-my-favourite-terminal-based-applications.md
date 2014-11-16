@@ -21,11 +21,11 @@ Mutt: email, but in a terminal
 ------------------------------
 
 [Mutt](http://www.mutt.org/) is a well-known text-based email client
-*(or more properly, a mail user agent (MUA))*.  It's very confusing and
-hard to get started with (I've been configuring it to make everything
-come together for at least a week), but the cute ASCII logo featured on
-[the wiki](http://dev.mutt.org/trac/wiki/MuttWiki) makes up for
-everything.
+*(or more properly, a mail user agent (MUA))*. It is undeniably
+confusing and hard to get started with (I've been configuring it to make
+everything come together for at least a week), but in my opinion the
+cute ASCII logo on [the wiki](http://dev.mutt.org/trac/wiki/MuttWiki)
+makes up for all shortcomings.
 
     ^. .^
      (J)
