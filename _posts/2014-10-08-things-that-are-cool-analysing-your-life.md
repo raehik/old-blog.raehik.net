@@ -31,7 +31,7 @@ shell (note: the history file only stores the most recent 10,000 lines):
          77 la
 
 (If you were wondering, `ll` and `la` are both aliases for `ls` (see [my
-.shellrc](LINK)).)
+.shellrc](https://github/com/raehik/dotfiles/blob/master/home/.shellrc)).)
 
 Yes: almost *a third* of my commands involve listing the current directory's
 contents. One of my scripts [`rmvim`](https://github.com/raehik/rmvim) is also
