@@ -34,7 +34,7 @@ syntax highlighting, which works a lot better.
 I was quite amused when I found I could fix some of the Markdown issues
 by literally `cat`ing the normal Markdown syntax into vimwiki's:
 
-    cat /usr/share/vim/vim74/markdown.vim ~/.vim/syntax/vimwiki_markdown.vim
+    cat /usr/share/vim/vim74/markdown.vim >> ~/.vim/syntax/vimwiki_markdown.vim
 
 Now headers look nice and links work a bit better.
 
