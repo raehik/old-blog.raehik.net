@@ -4,8 +4,8 @@ title: "A simple personal wiki"
 date: 2014-12-01 00:35:44
 ---
 
-Following [my post on vimwiki]({% post_url 2014-11-16-vimwiki-not-enough-markdown %})
-, I decided to create my own wiki program thing. It started with two
+Following [my post on vimwiki]({% post_url 2014-11-16-vimwiki-not-enough-markdown %}),
+I decided to create my own wiki program thing. It started with two
 scripts `mdwiki-preprocess` and `wikify`, the former to preprocess
 special wiki syntax and the latter to invoke that and render all the
 pages and the rest.
