@@ -27,6 +27,20 @@ main scrobbler I'm using, `mpdscribble`, can record your played songs in
 a very simple log file as well as submitting to Last.fm, so there's
 something to look at if you're a \*nix user.
 
+If you don't mind Last.fm being an online affair but want a backup of
+your data, then you're in luck -- Last.fm provides a very nice, if a bit
+slow, full export feature. About 3 days after I asked to export my data
+(a measly 750 scrobbles over the past week), I received an email with a
+link which only lasts 7 days. Seems a bit cheapskate-y (? careful with
+money ), but the data and format you get is incredibly good (?).
+Combined Unix timestamps and ISO time formats are what I'm most happy
+about!
+
+It seems to be a recent feature, since the zip file your data comes in
+includes a `readme.txt` with only the contents `Fill me out`, but
+providing it in a JSON format (& with MusicBrainz track IDs!) is a huge
+plus.
+
 I'm trying to test Last.fm's export feature, but they take ages to do
 it. Boo -- it can't be more than 1,000 short entries in a database, can
 it? Hrmph.
