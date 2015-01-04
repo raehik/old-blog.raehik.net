@@ -4,40 +4,38 @@ title: "Command sleuthing"
 date: 2014-12-08 00:00:49
 ---
 
-I lost my earphones & MP3 player at school last week somewhen. I deduced
-that it must have been on Monday or Tuesday, as I used it Sunday evening
-(worked out by checking my command history for something I knew I did
-when I was doing my chores) and I realised I was missing it on Wednesday
-(IIRC).
+This is a fun story on how I used my computer to jog my memory on where I
+left something.
 
-Sad times. I was kinda at a loss. But then I realised I could probably
-use my timestamped command history even more.
+After school one Friday I realised I hadn't seen my earphones & MP3
+player for a few days. I was in a bit of a pickle (?), since I hadn't looked
+for it properly closer to when I thought I might've lost it (Monday or
+Tuesday).
 
-I doubted that I would've used my earphones on Tuesday, since I didn't
-have any lessons I could realistically use them in. So, I found part of
-the Unix time which was between 1-2 Dec (more or less) and `grep`ped for
-all the commands I did around then:
+I remembered that I ran a script `mp3` (a symlink to
+[raehik/process-scrobble-log](https://github.com/raehik/process-scrobble-log))
+to upload my MP3 player's scrobble log quite recently. So, if I could
+figure out when I did that, I would have a lower bound for when I had it
+last.
 
-    grep 14174 ~/data/zsh_full_history
+I keep a log of all the zsh commands I run at `~/data/zsh_full_history`
+(for more on that, see {% post_url 2014-10-12-record-additional-full-zsh-history %}.
+Format is simple: Unix time followed by a space, then the full command.
+That makes it easy to parse. I started by `grep`ing for my most recent
+`mp3` command:
 
-Great, the output was short enough that I could scroll through it. I ran
-`school` (netctl profile alias script) in the morning, so I knew that I
-did indeed use my laptop at school that day (no surprise).
+    $ grep mp3 "~/data/zsh_full_history"
+    ...
+    1234267 mp3
+    1234567 grep mp3 "~/data/zsh_full_history"
+    (? fix times (find when I actually did it?))
 
-The best I could hope to get from this realistically was a memory jog.
-That's what happened when I saw this:
+Great, but I can't read Unix times. The `date` command is very versatile
+and provides a method for converting Unix times to more human-readable
+representations:
 
-    1417449405 alsamixer
-    1417449407 mpn
+    $ date --date='@[1234267]'
+    (? real date?)
 
-According to `date`, that was Monday 1 Dec 15:56:45 GMT 2014. And
-suddenly I remembered that I was running a club after school that day!
-The atmosphere was super dull, and I was considering playing some music
-while we worked... which meant I used my earphones then! And my MP3
-player stays with my earphones!
-
-So, if they're still in that room, then it's no wonder nobody picked
-them up, tucked in a corner on the teacher's as they might be!
-
-Wow, this history recording feature is way more useful than I could have
-ever thought it to be.
+Okay, now I know that I had MP3 player on [Sunday evening]. (? And so
+on...)
