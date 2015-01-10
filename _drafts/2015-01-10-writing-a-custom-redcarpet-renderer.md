@@ -1,5 +1,5 @@
 ---
-title: ayy lmao
+title: Writing a custom Redcarpet renderer
 ---
 
 TODO:
