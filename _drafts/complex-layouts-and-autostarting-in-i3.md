@@ -1,7 +1,5 @@
 ---
-layout: post
-title: "Complex layouts & autostarting in i3"
-date: 2014-09-28 18:08:00
+title: Complex layouts & autostarting in i3
 ---
 
 i3 is a fantastic window manager which gives you tons of options for

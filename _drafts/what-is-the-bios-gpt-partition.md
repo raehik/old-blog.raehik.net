@@ -1,7 +1,5 @@
 ---
-layout: post
 title: "BIOS-GPT: Why?"
-date: 2014-08-04 23:53:10
 ---
 
 //remember: rule of three,
