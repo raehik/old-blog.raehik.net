@@ -1,13 +1,13 @@
 # Site settings
-title: "another Linux dev guy"
+title: "Musings of a Linux dev"
 email: "thefirstmuffinman@gmail.com"
-description: "Writings and guides on Linux-y bits. Also maybe other things!"
-url: "raeh.co"
+description: "Guides on Linux things and essays on computer-related topics."
+url: "raehik.github.io"
 twitter_username: raehik
 github_username: raehik
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 permalink: pretty
 
 # Default frontmatter
@@ -16,5 +16,6 @@ defaults:
     scope:
       path: ""
       type: "posts"
+      type: "drafts"
     values:
       layout: "post"
