@@ -11,18 +11,14 @@ simple keylogger in Linux takes only a few lines, logging *complete* and
 opinion.
 
 Eventually, after searching and researching (and even trying to write my
-own solution in C) I found a [Perl solution]() [someone?] posted on Unix and
-Linux SE. It's entirely unreadable -- but hey, it works.
+own solution in C) I found a [Perl
+solution](http://unix.stackexchange.com/a/129171/45676) Stéphane
+Chazelas posted on Unix and Linux SE. It's entirely unreadable -- but
+hey, it works.
 
-I threw it up on my GitHub at [raehik/xinput-keylog](ey b0ss) and made
+I threw it up on my GitHub at [raehik/xinput-keylog](!GitHub) and made
 some changes, mainly to do with altering the logging format & printing
-to a file rather than `STDOUT`:
-
-    {% highlight perl %}
-
-    ey b0ss
-
-    {% endhighlight %}
+to a file rather than `stdout`.
 
 The log format is
 
