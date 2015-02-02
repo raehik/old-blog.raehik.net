@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Record all X11 keystrokes"
 date: 2014-10-12 13:00:00
 tags: linux graphical
@@ -43,3 +42,7 @@ record button releases as well, I could analyse how I use the keyboard
 extensively, maybe even find out which keys I 'lag' on (i.e. release
 only after pressing another button). Maybe someone could write a program
 for that? I'm too lazy :P
+
+*Edit: I now only record to second precision and only keydowns &
+repeats, because wow I stroke a lot of keys. You can still check it out
+in all its Perly glory at [raehik/xinput-keylog](!GitHub).*
