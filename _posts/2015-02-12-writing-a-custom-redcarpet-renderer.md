@@ -87,6 +87,8 @@ magic allows you to override only the parts of syntax you want to change
 (even though the renderer is written in C). To make a new renderer for
 shortlinks, I could write this:
 
+    {% highlight ruby %}
+
     require "redcarpet"
 
     class HTMLWithShortlinks < Redcarpet::Render::HTML
@@ -94,6 +96,8 @@ shortlinks, I could write this:
         ...
       end
     end
+
+    {% endhighlight %}
 
 The overridden `link` method needs to check the link for a shortlink,
 edit the link to form if one is present and return an `<a>` tag. Pretty
@@ -117,7 +121,11 @@ choose a custom query by setting a title for the shortlink. For example:
 
 would become
 
+    {% highlight html %}
+
     <a href="https://github.com/raehik/redcarpet-shortlink" title="GitHub: raehik/redcarpet-shortlink">raehik/redcarpet-shortlink</a>
+
+    {% endhighlight %}
 
 while
 
@@ -125,7 +133,11 @@ while
 
 is converted to
 
+    {% highlight html %}
+
     <a href="https://github.com/raehik/redcarpet-shortlink" title="GitHub: raehik/redcarpet-shortlink">My shortlink renderer</a>
+
+    {% endhighlight %}
 
 Since the `link` method I wrote must override all of the processing
 originally done by the C HTML renderer, I've tried to make sure normal

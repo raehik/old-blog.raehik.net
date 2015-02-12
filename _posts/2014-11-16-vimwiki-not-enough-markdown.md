@@ -4,12 +4,13 @@ title: "vimwiki: Cool, but not enough Markdown"
 date: 2014-11-16 11:14:36
 ---
 
-I'm having fun with [vimwiki](https://github.com/vimwiki/vimwiki) at the
-moment. It's an interesting Vim plugin which turns your editor into not
-only a wiki editor, but a viewer as well. Here's what I mean:
+I'm having fun with [vimwiki][] at the moment. It's an interesting Vim
+plugin which turns your editor into not only a wiki editor, but a viewer
+as well. Here's what I mean:
 
-![vimwiki
-example](/i/2014-11-16-104053_644x340_scrot.png)
+![vimwiki example](/assets/vimwiki-example.png)
+
+[vimwiki]: https://github.com/vimwiki/vimwiki
 
 The coolest thing about vimwiki is its automatic line squashing. All
 lines except the current one have their formatting syntax removed,

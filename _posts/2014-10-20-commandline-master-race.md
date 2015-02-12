@@ -10,10 +10,10 @@ with my Gmail account and it seems pretty fun.
 
 My current list of interactive terminal apps in constant use includes:
 
-  - [irssi](http://irssi.org/)
-  - [calcurse](http://calcurse.org/)
-  - [vim](http://www.vim.org/)
-  - [mpd](http://www.musicpd.org/) + [ncmpcpp](http://ncmpcpp.rybczak.net/)
-  - [mutt](http://www.mutt.org/)
+  * [irssi](http://irssi.org)
+  * [calcurse](http://calcurse.org)
+  * [vim](http://www.vim.org)
+  * [mpd](http://www.musicpd.org) + [ncmpcpp](http://ncmpcpp.rybczak.net)
+  * [mutt](http://www.mutt.org)
 
 So I'm pretty set for when the graphical display rapture comes.

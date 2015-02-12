@@ -18,7 +18,9 @@ But at the same time, it's kinda sad. From my 10,000 line shell history file,
 weThese are the most run commands in my
 shell (note: the history file only stores the most recent 10,000 lines):
 
-    history -n 0 | sort -h | uniq -c | sort -hr | head -n10
+    {% highlight bash %}
+
+    $ history -n 0 | sort -h | uniq -c | sort -hr | head -n10
        2613 ls
         322 git s
         285 cd
@@ -30,12 +32,15 @@ shell (note: the history file only stores the most recent 10,000 lines):
          87 sh .fehbg
          77 la
 
-(If you were wondering, `ll` and `la` are both aliases for `ls` (see [my
-.shellrc](https://github/com/raehik/dotfiles/blob/master/home/.shellrc)).)
+     {% endhighlight %}
 
-Yes: almost *a third* of my commands involve listing the current directory's
-contents. One of my scripts [`rmvim`](https://github.com/raehik/rmvim) is also
-quite common. (wording?) (more)
+
+`ll` and `la` are both aliases for `ls` (see [my .shellrc][]), so it can
+be seen quite clearly that *almost a third of my commands involve listing the current directory's
+contents*. One of my scripts [raehik/rmvim](!GitHub) is also quite
+common.
+
+[my .shellrc]: https://github/com/raehik/dotfiles/blob/master/home/.shellrc
 
 I will endeavour to get something running to record and store data on my shell
 commands, and probably post about what I did plus how & why.
