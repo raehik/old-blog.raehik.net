@@ -8,12 +8,13 @@ Introduction
 When I'm writing I don't like interrupting my train of thought. It
 easily occurs when I decide "ooh, this is a nice song, let me Google the
 artist" or when I'm experiencing [presque vu](!Wikipedia) and resolve to
-find a more fitting word. (I had to Google for that word, by the way.)
+find a more fitting word (I had to Google for that word, by the way).
 Another of the more irritating issues I've had is linking to pages in my
 writing. I frequently link to two websites in particular,
 [GitHub](https://github.com) and [Wikipedia](https://en.wikipedia.org).
 Having to Google the page I want, click on it, copy the URL and finally
-paste it into my terminal is tiresome.
+paste it into my terminal is tedious and sometimes I lose focus and end
+up browsing the Internet.
 
 [Gwern](http://gwern.net), a writer I follow who writes extensively in
 almost uncountable disciplines, keeps the source for his website in a
@@ -30,11 +31,11 @@ happens in [haskell/interwiki-compile.hs][interwiki], and it's... pretty
 unreadable if you're like me and don't know Haskell. But the abstract
 idea is very simple: rather than linking to a page, you specify the
 *website name* and a *query* (e.g. the Wikipedia page on [Stanley
-Kubrick](!Wikipedia)) and a link to the website with the
-query is formed in the HTML. By using this simple short syntax, you can
-link to pages much more fluidly and with hardly a second's interruption,
-though using non-canonical Markdown syntax. (Then again, if you're using
-Jekyll, you likely don't care about that.)
+Kubrick](!Wikipedia)) and a link to the website with the query is formed
+in the HTML. By using this simple short syntax, you can link to pages
+much more fluidly and with hardly a second's interruption, though using
+non-canonical Markdown syntax. (Then again, if you're using Jekyll, you
+likely don't care about that.)
 
 [hakyll-conf]: !GitHub "gwern/gwern.net/blob/master/hakyll.hs"
 [hakyll-conf-l117]: !GitHub "gwern/gwern.net/blob/master/hakyll.hs#L117"
@@ -53,12 +54,14 @@ Implementation
 --------------
 
 Now the question is posed: how to implement shortlink conversion?
-Writing a Markdown preprocessor would be a silly idea and I'm not a fan
-of the idea after the [last one](!GitHub "raehik/mdwiki-preprocess") I
-tried making. I chose to write a custom RedCarpet renderer since it's
-the converter I use for general use (TODO) and Jekyll. After a bit of
-reading on the [RedCarpet GitHub repo](!GitHub "vmg/redcarpet") it was
-reasonably straightforward how to create one.
+I tried writing a [Markdown
+preprocessor](!GitHub "raehik/mdwiki-preprocess") before and it soon
+became clear that I'd have to write a full Markdown parser to understand
+where not to convert shortlinks. I chose to write a custom RedCarpet
+renderer since it's the converter I use for general use (TODO) and
+Jekyll. After a bit of reading on the [RedCarpet GitHub
+repo](!GitHub "vmg/redcarpet") I found it reasonably straightforward how
+to create one.
 
 The specification for my shortlink renderer follows:
 
@@ -73,20 +76,16 @@ converted to links pointing to the title. For example:
 
     [i/relative-img.png]()
     
-would become
+would be treated as
 
-    <a href="i/relative-img.png">i/relative-img.png</a>
-
-instead of
-
-    <a href="">i/relative-img.png</a>
+    [i/relative-img.png](i/relative-img.png)
 
 I don't want to change anything else in the Markdown conversion.
 
-Fortunately, RedCarpet lets you extend the default renderer, and some
-impressive Ruby magic allows you to override only the parts you want to
-change (even though the renderer is written in C). To make a new
-renderer for shortlinks, I could write this:
+RedCarpet lets you extend the default renderer, and some impressive Ruby
+magic allows you to override only the parts of syntax you want to change
+(even though the renderer is written in C). To make a new renderer for
+shortlinks, I could write this:
 
     require "redcarpet"
 
@@ -105,22 +104,37 @@ can't use the original method using `super` because, as I mentioned
 before, it's written in C with a Ruby API. Luckily in this case it's no
 issue, because `<a>` tags are simple to form.
 
+
+My shortlink renderer
+---------------------
+
 My renderer at [raehik/redcarpet-shortlink](!GitHub) does the shortlink
-processing, and also checks for empty links -- if a link is empty, we
-link it to the content rather than nothing. I also copied the rest of
+processing and also checks for empty links. I also copied the rest of
 Gwern's features such as forming a title for shortlinks and letting you
-choose a custom query by setting a title for the shortlink.
+choose a custom query by setting a title for the shortlink. For example:
 
-    e.g.
+    [raehik/redcarpet-shortlink](!GitHub)
 
-and so far I think my renderer
-hasn't formed a bad link. If you think you've found something, make an
-issue.
+would become
 
----
+    <a href="https://github.com/raehik/redcarpet-shortlink" title="GitHub: raehik/redcarpet-shortlink">raehik/redcarpet-shortlink</a>
+
+while
+
+    [My shortlink renderer](!GitHub "raehik/redcarpet-shortlink")
+
+is converted to
+
+    <a href="https://github.com/raehik/redcarpet-shortlink" title="GitHub: raehik/redcarpet-shortlink">My shortlink renderer</a>
+
+Since the `link` method I wrote must override all of the processing
+originally done by the C HTML renderer, I've tried to make sure normal
+links are formed identically (or at least correctly). So far I'm quite
+sure my renderer hasn't formed a bad link, but I'm not very sure about
+HTML-escaping. If you find any bugs, please [create an
+issue](!GitHub "raehik/redcarpet-shortlink/issues") on the GitHub repo.
 
 *(Note: I tried to use shortlinks as much as possible in this post.
-[Check the source][this-post] to see all the occurences.)*
+[Read the source][this-post] if you'd like to see all the occurences.)*
 
-[this-post]: !GitHub "raehik/raehik.github.io/blob/master/2015-01-10-writing-a-custom-redcarpet-renderer.md"
-TODO: post_url or post_title for this-post?
+[this-post]: !GitHub "raehik/raehik.github.io/blob/master/{{ page.path }}"
