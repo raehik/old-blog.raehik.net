@@ -149,4 +149,4 @@ issue](!GitHub "raehik/redcarpet-shortlink/issues") on the GitHub repo.
 *(Note: I tried to use shortlinks as much as possible in this post.
 [Read the source][this-post] if you'd like to see all the occurences.)*
 
-[this-post]: !GitHub "raehik/raehik.github.io/blob/master/{{ page.path }}"
+[this-post]: !GitHub "raehik/raehik.me/blob/master/{{ page.path }}"
