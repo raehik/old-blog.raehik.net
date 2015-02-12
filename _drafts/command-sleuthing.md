@@ -18,10 +18,11 @@ when I did that, I would have a lower bound for the time at which I had
 it last.
 
 I keep a log of all the zsh commands I run at `~/data/zsh_full_history`
-(see my [full command history post]({% post_url
-2014-10-12-record-additional-full-zsh-history %}). Format is simple:
-Unix time followed by a space, then the full command. That makes it easy
-to parse. I started by `grep`ing for my most recent `mp3` command:
+(see my [full command history
+post]({% post_url 2014-10-12-record-additional-full-zsh-history %}).
+Format is simple: Unix time followed by a space, then the full command.
+That makes it easy to parse. I started by `grep`ing for my most recent
+`mp3` command:
 
     $ grep mp3 "~/data/zsh_full_history"
     ...
