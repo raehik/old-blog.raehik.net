@@ -1,13 +1,13 @@
 # Site settings
-title: "Musings of a Linux dev"
-email: "thefirstmuffinman@gmail.com"
-description: "Guides on Linux things and essays on computer-related topics."
-url: "raehik.github.io"
+title: Musings of a Linux dev
+email: thefirstmuffinman@gmail.com
+description: Guides on Linux things and essays on computer-related topics.
+url: raehik.github.io
 twitter_username: raehik
 github_username: raehik
 
 # Build settings
-markdown: redcarpet
+markdown: RedcarpetShortlink
 permalink: pretty
 
 # Default frontmatter
