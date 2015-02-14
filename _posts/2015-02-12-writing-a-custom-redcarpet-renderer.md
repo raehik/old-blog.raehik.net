@@ -57,9 +57,9 @@ Now the question is posed: how to implement shortlink conversion?
 I tried writing a [Markdown
 preprocessor](!GitHub "raehik/mdwiki-preprocess") before and it soon
 became clear that I'd have to write a full Markdown parser to understand
-where not to convert shortlinks. I chose to write a custom RedCarpet
+where not to convert shortlinks. I chose to write a custom Redcarpet
 renderer since it's the converter I use for general use (TODO) and
-Jekyll. After a bit of reading on the [RedCarpet GitHub
+Jekyll. After a bit of reading on the [Redcarpet GitHub
 repo](!GitHub "vmg/redcarpet") I found it reasonably straightforward how
 to create one.
 
@@ -82,7 +82,7 @@ would be treated as
 
 I don't want to change anything else in the Markdown conversion.
 
-RedCarpet lets you extend the default renderer, and some impressive Ruby
+Redcarpet lets you extend the default renderer, and some impressive Ruby
 magic allows you to override only the parts of syntax you want to change
 (even though the renderer is written in C). To make a new renderer for
 shortlinks, I could write this:
