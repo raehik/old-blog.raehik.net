@@ -24,25 +24,25 @@ audioscrobblers, so there's something to look at if you use MPD.
 [mpdscribble]: http://manpages.ubuntu.com/manpages/utopic/man1/mpdscribble.1.html
 
 If you don't mind Last.fm holding your data but like keeping backups of
-your, then you're in luck. They provide a very nice - if rather slow -
-[data export service][]. About 3 days after I requested my archive (only
-having accrued a measly <1000 scrobbles over the week I'd had my account
-for), I received an email with a link which lasts only [7 days][]. Seems
-a bit stingy, but they kindly provide separate CSV and JSON files, and
-timestamp using combined Unix times and ISO time formats which makes me
-feel warm inside :)
+your data, then you're in luck. They provide a very nice - if rather
+slow - [data export service][]. About 3 days after I requested my
+archive (only having accrued a measly <1000 scrobbles over the week I'd
+had my account for), I received an email with a link which lasts only 7
+days. Seems a bit stingy, but they kindly provide separate CSV and
+JSON files, and timestamp using combined [Unix times](!Wikipedia) and
+[ISO time formats](!Wikipedia) (?) which makes me feel warm inside :)
 
 [data export service]: http://www.last.fm/settings/dataexporter
-[7 days]: https://www.youtube.com/watch?v=nEi02bHQ4rU&t=30s
 
 *(Note: The export feature seems to be recent, since the zip file your
 data comes in includes a `readme.txt` with only the contents `Fill me
 out`. They also mention on the export page that it's experimental.
 Hopefully it'll be improved eventually!)*
 
-Scrobbling appeals to me greatly because, hell, it's more statistics
-about myself. I like to think I might have a use for all my data one
-day. Who knows -- maybe it'll somehow come in handy like [recorded shell
-commands][].
+For people looking to record information about the songs they listen to
+and don't mind sharing that data with a company who make their money off
+using it, Last.fm gets a recommendation from me. It's a simple service
+and a cinch to set up with most music players, including [Rockbox][]-ed
+portable players.
 
-[recorded shell commands]: post_url command-sleuthing
+[Rockbox]: http://rockbox.org
