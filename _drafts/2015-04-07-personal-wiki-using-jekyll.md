@@ -3,6 +3,9 @@ title: "Personal wiki using Jekyll"
 date: 2015-04-07 16:27:42
 ---
 
+Repo link: [raehik/jekyll-wiki-template](!GitHub)
+
+
 1: Why I wanted to do it
 ------------------------
 
