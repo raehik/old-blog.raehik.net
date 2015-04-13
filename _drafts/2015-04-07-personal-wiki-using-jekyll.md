@@ -21,20 +21,25 @@ knowledge, I'd find it there. I started out on November 15th using
 [vimwiki][] because it seemed neat and I use Vim for a large majority of
 my electronic work.
 
-[personal wiki]: !Wikipedia
-[vimwiki]: !GitHub "vimwiki/vimwiki"
+[personal wiki]: http://en.wikipedia.org/wiki/Personal_wiki
+[vimwiki]: https://github.com/vimwiki/vimwiki
 
 Later, I wrote [my own static site generator][wikify] which was
 *incredibly* hacky and thrown together, then eventually moved to Jekyll
 after I'd gotten over my Not Invented Here syndrome. I separated my
-pages from the template and thus [jekyll-wiki-template][repo] was born.
+pages from the template and thus [**jekyll-wiki-template**][repo] was born.
 
-[wikify]: !GitHub "raehik/wikify"
-[repo]: !GitHub "raehik/jekyll-wiki-template"
+[wikify]: https://github.com/raehik/wikify
+[repo]: https://github.com/raehik/jekyll-wiki-template
 
 
 Development status
 ------------------
+
+I'm actively working on the wiki template (especially the CSS and
+layouting) as I add to my personal wiki. I've got a whole bunch of TODOs
+including adding 'templates' like Wikipedia (e.g. biography template,
+video game console template, ...) and disambiguation pages/tags.
 
 Trying to streamline the writing process has led me to develop some
 useful plugins and other things. The best examples I have are my TOC
