@@ -1,13 +1,13 @@
 # Site settings
-title: Musings of a Linux dev
+title: Diaries of a Script Kiddie
 email: thefirstmuffinman@gmail.com
-description: Guides on Linux things and essays on computer-related topics.
+description: Musings and guides on tech with a Linux slant.
 url: raehik.github.io
 twitter_username: raehik
 github_username: raehik
 
 # Build settings
-markdown: RedcarpetShortlink
+markdown: RedcarpetCustom
 permalink: pretty
 
 # Default frontmatter
